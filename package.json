@@ -1,0 +1,40 @@
+{
+  "name": "backdrop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Slack-native product photography pipeline — turns catalog rows into approved, published styled photos",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node --env-file-if-exists=.env.local dist/main.js",
+    "dev": "tsx watch --env-file-if-exists=.env.local src/main.ts",
+    "migrate": "tsx --env-file-if-exists=.env.local src/migrate.ts",
+    "migrate:images-to-r2": "tsx --env-file-if-exists=.env.local src/migrate-images-to-r2.ts",
+    "wipe:pipeline": "node dist/wipe-pipeline-state.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1127.0",
+    "@aws-sdk/lib-storage": "^3.1127.0",
+    "@fastify/static": "10.1.3",
+    "@slack/bolt": "5.1.0",
+    "better-sqlite3": "13.0.3",
+    "csv-parse": "7.0.2",
+    "fastify": "5.12.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.13",
+    "@types/node": "24.3.0",
+    "@vitest/coverage-v8": "5.0.0",
+    "fast-check": "4.9.0",
+    "tsx": "4.20.6",
+    "typescript": "5.9.2",
+    "vitest": "5.0.0"
+  }
+}

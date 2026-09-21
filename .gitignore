@@ -1,0 +1,29 @@
+.env
+.env.local
+node_modules/
+__pycache__/
+.venv/
+.DS_Store
+.claude/settings.local.json
+
+# build + runtime artifacts
+dist/
+coverage/
+*.tsbuildinfo
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+data/images/*
+!data/images/.gitkeep
+
+# gcloud SDK installs (in case anyone unpacks it inside the repo)
+.gcloud/
+google-cloud-sdk/
+google-cloud-cli-*.tar.gz
+
+
+.claude
+
+# catalogs + images (local demo data, not published)
+data/*.csv
