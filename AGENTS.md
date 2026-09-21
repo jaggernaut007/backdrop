@@ -43,7 +43,7 @@ for every library live in `docs/libraries/`; decisions in `docs/adr/`.
 ## Definition of Done
 1. `npm test` green — the 19 `docs/SPEC.md` scenarios (verbatim `it()` names) + domain + property suites.
 2. `npm run typecheck` clean; `docker build` succeeds; container shuts down gracefully (exit 0).
-3. Live against the deployed URL + a real Slack workspace: drop `data/catalog.csv` → summary
+3. Live against the deployed URL + a real Slack workspace: drop a catalog CSV (e.g. `test/fixtures/catalog.sample.csv`) → summary
    posts; a real Draft posts for `HG-002` with Approve/Reject; with `OPEN_APPROVAL=false` the
    approver's tap moves it and no one else's does; approve → 2 Finals → auto-publish → two
    `hg-002-styled-0n.jpg` URLs return 200; Request `done`.

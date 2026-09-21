@@ -12,7 +12,7 @@ import { FakeSlackGateway } from "../fakes/fake-slack-gateway.js";
 const CATALOG = readFileSync(
   path.join(
     path.dirname(fileURLToPath(import.meta.url)),
-    "../../data/catalog.csv",
+    "../fixtures/catalog.sample.csv",
   ),
 );
 

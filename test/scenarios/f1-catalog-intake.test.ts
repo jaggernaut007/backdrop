@@ -12,7 +12,7 @@ import { InMemoryRepository } from "../fakes/in-memory-repository.js";
 const CATALOG = readFileSync(
   path.join(
     path.dirname(fileURLToPath(import.meta.url)),
-    "../../data/catalog.csv",
+    "../fixtures/catalog.sample.csv",
   ),
 );
 

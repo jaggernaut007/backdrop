@@ -9,7 +9,7 @@ import { parseCatalogCsv } from "../../src/adapters/csv.js";
 const CATALOG = readFileSync(
   path.join(
     path.dirname(fileURLToPath(import.meta.url)),
-    "../../data/catalog.csv",
+    "../fixtures/catalog.sample.csv",
   ),
 );
 
@@ -19,14 +19,14 @@ describe("parseCatalogCsv — the real Export", () => {
   it("maps the awkward headers and yields one row per SKU", () => {
     expect(rows).toHaveLength(40);
     expect(rows[0]?.sku).toBe("HG-001");
-    expect(rows[0]?.productName).toBe("Stoneware Vase");
+    expect(rows[0]?.productName).toBe("Speckled Vase");
     expect(rows[0]?.colorFinish).toBe("Terracotta"); // header is "Color / Finish"
   });
 
   it("keeps interior commas in a quoted Shot Idea / Notes", () => {
     const hg002 = rows.find((r) => r.sku === "HG-002");
-    expect(hg002?.shotIdea).toBe("morning kitchen counter, steam, warm light");
-    expect(hg002?.notes).toBe("El: bestseller, do this one first");
+    expect(hg002?.shotIdea).toBe("morning table by a window, steam, soft light");
+    expect(hg002?.notes).toBe("bestseller, shoot this one first");
   });
 
   it("leaves the leading $ on the price for the domain layer", () => {

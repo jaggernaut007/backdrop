@@ -56,7 +56,7 @@ dashboard. Trialed last quarter. Nobody logged in after week one.
 
 ## Data handoff — observed quirks
 
-`data/catalog.csv`, 40 rows, "a sample of the full 300."
+`test/fixtures/catalog.sample.csv` — a 40-row sample of a larger catalog (synthetic; photo URLs are placeholders).
 
 - **16 rows have a Shot Idea**, 24 are blank. Matches the problem statement's "sixteen in the sheet right now."
 - **Gaps in the SKU sequence** (HG-007, -015, -023, -031, -039 absent). It's a filtered export, not

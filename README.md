@@ -36,7 +36,7 @@ team already is.** For this team, that is Slack.
 One import = one thread. Forty products arrive as a single live message, not forty
 notifications.
 
-1. **Drop a CSV** (`data/catalog.csv`, or any same-shape export — SKU, name, colour,
+1. **Drop a CSV** (`test/fixtures/catalog.sample.csv` is a sample, or any same-shape export — SKU, name, colour,
    price, photo URL, shot idea, notes) into the watched channel. Ingest fires on Slack's
    `file_shared` event.
 2. **One batch status message** posts to the channel root within seconds — one line per

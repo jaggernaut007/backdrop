@@ -145,7 +145,7 @@ const records = parse(buffer, {   // input: string | Buffer (Buffer accepted dir
 });
 ```
 
-Behaviour on the catalog's quirks (`data/catalog.csv`):
+Behaviour on the catalog's quirks (`test/fixtures/catalog.sample.csv`):
 
 - **Quoted field with commas** — handled by default. `"El: bestseller, do this one first"` →
   the single value `El: bestseller, do this one first` (quotes stripped, interior `,` and `:`

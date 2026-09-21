@@ -25,7 +25,7 @@ makes, the scope ledger, the unit economics, and what breaks first.
    `if (event.channel_id !== config.slack.channelId) return`), and the one Slack gateway only ever
    posts to that channel. Retargeting means changing the variable and redeploying; it cannot serve
    two channels at once.
-2. **Kick off a batch:** drag a catalog CSV into that channel — `data/catalog.csv`, or any
+2. **Kick off a batch:** drag a catalog CSV into that channel — `test/fixtures/catalog.sample.csv` is a sample, or any
    same-column export (SKU, name, colour, price, photo URL, Shot Idea, Notes). Ingest fires on
    Slack's `file_shared` event; nothing else is needed. Within seconds one **batch status message**
    posts to the channel root — one line per SKU with its state — and stays live, editing itself in

@@ -1,6 +1,6 @@
 /**
  * The brand's tight, repeating colour palette — the same ~10 terms recur across every
- * category in `data/catalog.csv` (TASK.md "Data handoff — observed quirks").
+ * category in `test/fixtures/catalog.sample.csv`.
  *
  * Brand consistency is checkable, not vibes: a `Color / Finish` cell like
  * "Cream Terracotta Sage" is an *ordered* list of these terms plus, sometimes, an

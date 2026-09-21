@@ -8,7 +8,7 @@ import {
 
 describe("resolvePaletteTokens — real catalog `Color / Finish` shapes", () => {
   it.each<[string, { matched: string[]; unmatched: string[] }]>([
-    // single palette term alone — the dominant shape in data/catalog.csv
+    // single palette term alone — the dominant shape in test/fixtures/catalog.sample.csv
     ["Terracotta", { matched: ["Terracotta"], unmatched: [] }],
     ["Smoke", { matched: ["Smoke"], unmatched: [] }],
     ["Dusty Blue", { matched: ["Dusty Blue"], unmatched: [] }],
